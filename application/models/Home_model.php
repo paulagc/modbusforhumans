@@ -23,7 +23,29 @@
 			return $raw_data;
 		}
 
-		
+		//Auxiliary function to convert line 92 - Signal quality
+		public function convertInteger($raw_element){
+			
+			//Convert to binary
+			$binary = decbin($raw_element);
+			//Takes last 8 bits
+			$binaryLow = substr($binary, -8);  
+			//Converts back to decimal
+			$integer_element = bindec($binaryLow);
+
+			return $integer_element;
+		}
+
+		//Main function to convert data to readable for humans
+		public function convertData($data_array){
+
+
+			//Convert 92
+			$data_array[92] = $this->convertInteger($data_array[92]);
+
+			return $data_array;
+
+		}
 
 
 

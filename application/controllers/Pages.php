@@ -14,6 +14,8 @@
 	        $raw_data = $this->home_model->getRawData();
 	        $data['raw_data'] = $raw_data;
 	        
+	        $converted_data = $this->home_model->convertData($raw_data);
+
 	        $this->load->helper('url');
 	        $this->load->view('templates/header', $data);
 	        $this->load->view('pages/'.$page, $data);
