@@ -11,10 +11,14 @@
 
 	        $data['title'] = ucfirst($page); // Capitalize the first letter
 	         
-	        $raw_data = $this->home_model->getRawData();
-	        $data['raw_data'] = $raw_data;
+	        $rawData = $this->home_model->getRawData();
+	        $data['rawData'] = $rawData;
 	        
-	        $converted_data = $this->home_model->convertData($raw_data);
+	        $convertedData = $this->home_model->convertData($rawData);
+	        $data['convertedData'] = $convertedData;
+
+	        $date = $this->home_model->getDate($rawData);
+	        $data['date'] = $date;
 
 	        $this->load->helper('url');
 	        $this->load->view('templates/header', $data);
