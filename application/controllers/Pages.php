@@ -9,7 +9,7 @@
 	                show_404();
 	        }
 
-	        $data['title'] = ucfirst($page); // Capitalize the first letter
+	        $data['title'] = $page;
 	         
 	        $rawData = $this->home_model->getRawData();
 	        $data['rawData'] = $rawData;
