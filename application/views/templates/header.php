@@ -8,13 +8,13 @@
 		<script src="<?= base_url() ?>js/bootstrap.js"></script>
 		
 		<title>modbusforhumans</title>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		   
 		        <div class="navbar-header">
 		        	<a class="navbar-brand" href="<?php echo base_url(); ?>">ModbusForHumans</a>
 		        </div>
 		        <div id="navbar">
-		        	<ul class="nav navbar-nav ">
+		        	<ul class="nav navbar-nav mr-auto ">
 		            	<li  <?php if(strcmp($title, "raw" )  == 0){ 
 		            				echo 'class = "active nav-item"';
 			            		}else{
