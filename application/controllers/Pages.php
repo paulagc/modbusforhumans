@@ -10,8 +10,10 @@
 	        }
 
 	        $data['title'] = ucfirst($page); // Capitalize the first letter
-	        $data['raw_data'] = $this->home_model->getRawData();
-
+	         
+	        $raw_data = $this->home_model->getRawData();
+	        $data['raw_data'] = $raw_data;
+	        
 	        $this->load->helper('url');
 	        $this->load->view('templates/header', $data);
 	        $this->load->view('pages/'.$page, $data);
