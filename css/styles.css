@@ -1,0 +1,62 @@
+/* Footer to the bottom and fixed*/
+footer{
+	clear: both;
+	position: fixed;
+  	bottom: 0;
+	width: 100%;
+}
+
+/* No padding on card elements*/
+.card{
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+
+/* Overflow and margin from nav and footer for data pages*/
+#convertedContent, #rawContent{
+	margin-bottom: 5%;
+	margin-top: 5%;
+	overflow: scroll;
+}
+
+/* Margin from nav for home page*/
+#welcomeContainer{
+	margin-top: 10%;
+}
+
+/* Width of last row in converted data*/
+#lastRow{
+	
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* Paddings of last column in converted data*/
+#lastCol{
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+}
+
+
+/* Responsive design for mobile phones*/
+@media screen and (max-device-width : 480px) {
+
+	/* Overflow and margin from nav and footer for data pages*/
+	#convertedContent, #rawContent{
+		margin-bottom: 30%;
+		margin-top: 30%;
+		overflow: scroll;
+	}
+
+	/* Margin from nav for home page*/
+	#welcomeContainer{
+		margin-top: 40%;
+	}
+
+	#welcomeMsg {
+	    font-size: 8vw;
+	}
+}
