@@ -56,6 +56,7 @@ footer{
 		margin-top: 40%;
 	}
 
+	/* Smaller welcome message*/
 	#welcomeMsg {
 	    font-size: 8vw;
 	}

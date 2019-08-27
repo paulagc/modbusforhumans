@@ -82,7 +82,6 @@
 			    	</tr>
 
 				</tbody>
-			</table>
-		
+			</table>	
 	
 </div>

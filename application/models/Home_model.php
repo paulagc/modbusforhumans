@@ -1,11 +1,12 @@
 <?php
 	class Home_model extends CI_Model{
 		
+		//Gets data from URL and returns lines of text in array
 		public function getRawData(){
 
 			//Gets data from url
 			$rawText = file_get_contents("http://tuftuf.gambitlabs.fi/feed.txt"); 
-			//$rawData_lines = new array();
+			
 			//Extracts each line of the text and puts them in an array
 			$rawData = explode("\n", $rawText);
 
@@ -24,6 +25,7 @@
 			return $rawData;
 		}
 
+		//Gets the date of the record
 		public function getDate($rawData){
 			return $rawData[0];
 		}
@@ -87,13 +89,15 @@
 
 			//Check if there's exponent or not to do adjustment
 			if(($exp + 127) > 0){
-				$mant = ($mant / 8388608) + 1; //Divide by 80 00 00 in hex and add 1
+				//Divide by 80 00 00 in hex and add 1
+				$mant = ($mant / 8388608) + 1; 
 			}else{
-				$mant = $mant / 4194304; //Divide by 40 00 00 hex 
+				//Divide by 40 00 00 hex 
+				$mant = $mant / 4194304; 
 			}
 
+			//Create the equation
 			$convertedElement = pow(-1, $sign) * ($mant) * pow(2, $exp);
-
 
 
 			return $convertedElement;
